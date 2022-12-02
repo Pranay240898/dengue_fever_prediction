@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Info System</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+    <style type="text/css">
+         #para{
+          width: 700px;
+          margin-left: 400px;
+         }
+         p{
+          line-height: 2.1;
+         }
+         .ml-container{
+          margin-left: 650px;
+         }
+         .container{
+          width: 100%;
+          height: 100%;
+          background-color: grey;
+         }
+    </style>
+  </head>
+  <body>
+    <div class="ui secondary  menu">
+      <a class="item"><i class="book icon"></i></a>
+      <a href="/" class="item">
+              Home
+      </a>
+      <a  href="/results" class="item">
+        Data 
+      </a>
+      <a  href="/stats" class="item">
+        Stats
+      </a>
+    </div>   
+<h3 class="ui block header">
+  Dengue fever prediction using meteorological data
+</h3>     
+<div class="container">
+<div class="ui raised segment" id="para">
+  <p>Dengue is an epidemic disease found in several developed as well as developing countries like 
+India. Recent research estimates that there were 390 million dengue infections per year and 
+predicts that dengue transmission is present throughout the tropics, with the highest risk in the 
+American and the Asian regions. This disease is caused by breeding of a mosquito called Aedes. 
+Dengue has become a global problem and it is common in all the countries. Early warnings of 
+dengue outbreak will help to reduce the disease burden and to control it. In this paper, we 
+compare various machine learning algorithms and found the accuracy of these algorithms for the 
+early detection of dengue disease. Data mining is the technique for the classification of diseases 
+like dengue. In this work, Kaggle is used to evaluate and compare the results.<br>
+<em>GUI : Kaggle</em> <br> <em>OUTPUT : CSV File </em>
+</p>
+</div>     
+
+	<form action="{{url_for('results')}}" method="POST">
+  <div class="ui inverted segment">
+  <div class="ui inverted form">
+     <label>Training Data </label>
+    <div class="two fields">
+      <div class="field">
+        <input placeholder="Training Data" type="text" name="path1">
+      </div>
+      <div class="field">
+
+        <input placeholder="Training Data" type="text" name="path2">
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <input placeholder="Tesing Data" type="text" name="path1">
+      </div>
+      <div class="field">
+
+        <input placeholder="Testing Data" type="text" name="path2">
+      </div>
+    </div>
+    <div class="ui submit button"><input type="submit" name="Submit"></div>
+  </div>
+</div>
+</div>
+</form>
+</body>
+</html>

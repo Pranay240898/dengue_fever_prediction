@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Info System</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/app.css">
+    </head>
+    <body>
+        <div class="ui secondary  menu">
+            <a class="item"><i class="book icon"></i></a>
+            <a href="/" class="item">
+              Home
+          </a>
+          <a href="/" class="item">
+              Stats
+          </a>
+            </div>
+          </div>
+              
+   
+	
+	<div class="results">	
+  <div class="ui inverted segment">
+    <h2 class="ui violet inverted header">Results<h2>
+  </div>  
+  <table class="ui selectable inverted table">
+     {% for s2 in s %}
+    <tr>
+      <td>{{s2[0]}}</td>
+      <td>{{s2[1]}}</td>
+      <td>{{s2[2]}}</td>
+      <td>{{s2[3]}}</td>
+    </tr>
+        {% endfor %}
+  </table>
+
+	</div>
+
+
+</body>
+</html>
